@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jq</title>
+    <style>
+        .odd{
+            background: orange;
+            padding: 10px;
+        }
+        .even{
+            background: skyblue;
+            padding: 10px;
+        }
+        .first{
+           background: navy;
+            padding: 10px; 
+        }
+        .last{
+           background: darkgrey;
+            padding: 10px; 
+        }
+        .nth{
+            background: greeb;
+            color: brown;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="list-unstyled">
+        <li>home</li>
+        <li>about</li>
+        <li>photo gallery</li>
+        <li>project</li>
+        <li>web mail</li>
+        <li>company profile</li>
+        <li>contact us</li>
+    </ul>
+    
+    <p>nahid</p>
+    <p>jhony</p>
+    <p>mahbub</p>
+    <p>rajdeep</p>
+    <p>bappy</p>
+    <p>ershad</p>
+    
+    <h1>this is nahid</h1>
+    <h2>this is jhony</h2>
+    <h3>this is mahbub</h3>
+    <h4>this is rajdeep</h4>
+    <h5>this is bappy</h5>
+    <h6>this is ershad</h6>
+    
+    <h1>this is nahid</h1>
+    <h1>this is jhony</h1>
+    <h1>this is mahbub</h1>
+    <h1>this is rajdeep</h1>
+    <h1>this is bappy</h1>
+    <h1>this is ershad</h1>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $("li:odd").addClass("odd");
+        
+        $("li:even").addClass("even");
+        
+        $("li:first").addClass("first");
+        
+        $("li:last").addClass("last");
+        
+        $("li:eq(3)").addClass("nth");
+        
+        
+    });
+        
+        $(document).ready(function(){
+            $("p").click(function(){
+                $(this).hide("fast");
+            });
+        });
+        
+        $(document).ready(function(){
+            $(":header").fadeOut(3000);
+        });
+        
+        $(document).ready(function(){
+            $("h1:not(h1:eq(5))").fadeIn(3000);
+        });
+        
+    </script>
+    
+</body>
+</html>
